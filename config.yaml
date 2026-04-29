@@ -1,0 +1,33 @@
+defaults:
+  random_state: 9
+  n_runs: 1
+  tol: 1.0e-5
+  lambda1: 0.0
+  lambda2: 0.0
+  lambda3: 0.0
+  lambda4: 54.0
+  lambda5: 150.0
+  lambda6: 0.0
+
+numerical_simulation:
+  n_features: 20
+  shared_rank: 2
+  n_train: 1000
+  n_test_normal: 500
+  n_test_fault: 500
+  fault_feature: 2
+  fault_bias: 10.0
+  noise_std: 0.1
+  n_atoms_D1: 100
+  n_atoms_D2: 100
+  sparsity_D1: 2
+  sparsity_X1: 3
+  sparsity_X2: 3
+  tau: 0.18        # tau 不传时 → 默认 null(None) → update_P 自动用 λ₄/(2λ₅)
+  kde_confidence: 0.92
+  max_iter: 300
+
+sensitivity_analysis:
+  tau_values: [0.10, 0.11, 0.12, 0.13, 0.14, 0.15, 0.16, 0.17, 0.18, 0.19]
+  sparsity_D1_values: [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+  fault_bias: 8.0
